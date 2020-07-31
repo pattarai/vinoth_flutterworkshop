@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:toast/toast.dart';
 
-import 'contact.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -429,57 +429,10 @@ class BioData extends StatelessWidget {
                                         ],
                                       )),
                                 ),
-                              )
-
-                              Padding(
-                                padding: const EdgeInsets.only(bottom: 10),
-                                child: InkWell(
-                                  // splashColor: Colors.deepPurpleAccent,
-                                  onTap: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (BuildContext context) =>
-                                                    ContactMe()));
-                                  },
-                                  child: Container(
-                                      height:270,
-                                      width:400,
-                                      padding: EdgeInsets.all(15),
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                            end: Alignment.bottomLeft,
-                                            begin: Alignment.topRight,
-                                            colors: [
-                                              Color(0xFF1565C0),
-                                              Color(0x8A000000)
-                                            ]),image: DecorationImage(
-                                        image: AssetImage("fonts/LEGO.jpg"),
-                                        alignment: Alignment.topCenter,
-                                        colorFilter: new ColorFilter.mode(
-                                            Colors.black.withOpacity(0.5), BlendMode.dstATop),
-                                        fit: BoxFit.fitHeight,
-                                      ),
-
-                                        borderRadius:
-                                        BorderRadius.all(Radius.circular(15)),
-                                      ),
-                                      child: Column(
-                                        children: [
-                                          Icon(Icons.call),
-                                          Padding(
-                                              padding: EdgeInsets.only(bottom: 190)),
-                                          Text(
-                                            "contact me",
-                                            style: TextStyle(
-                                                color: Colors.white,
-                                                fontSize: 15),
-                                          ),
-                                        ],
-                                      )),
-                                ),
                               ),
-    Container(
+
+
+                              Container(
       margin:EdgeInsets.all(20.0),
       color:Colors.white,
       child:
@@ -521,6 +474,17 @@ class BioData extends StatelessWidget {
                             ],
                           ),
                         )),
+                    RaisedButton(
+                      onPressed: () {
+                        Toast.show("Toast plugin app", context, duration: Toast.LENGTH_SHORT, gravity:  Toast.BOTTOM);
+
+
+                      },
+                      child: Text('Submit'),
+                    ),
+
+
+
 
                   ],
                 ),
