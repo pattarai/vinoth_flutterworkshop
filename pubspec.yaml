@@ -30,7 +30,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
   toast: ^0.1.5
-  webview_flutter: ^0.3.18+1
+  webview_flutter: ^0.3.18+1h
+  math_expressions: ^1.0.0
+
 
 
 dev_dependencies:
@@ -70,6 +72,9 @@ flutter:
      - fonts/ju.jpg
      - fonts/bm.jpg
      - fonts/back.jpg
+     - fonts/dcu.jpg
+     - fonts/login.jpg
+     - fonts/log.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
